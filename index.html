@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>  
+
+<html>
+<head>
+	<title>AKQA basket</title>
+    <meta charset="utf-8">
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css">
+    <link href="css/basket.css" rel="stylesheet" type="text/css">
+</head>  
+
+<body>
+
+    <div class="content">
+        <div class="content__wrapper">
+            <h1 class="logo">
+                <a href="#" class="logo__link">AKQA</a>
+            </h1>
+
+            <div class="description">
+                <h2 class="description__title">Your Basket</h2>
+                <p>Items you have added to your basket are shown below.</p>
+                <p>Adjust the quantities or remove items before continuing your purchase.</p>
+            </div>
+
+            <form class="basket" action="#" method="post">
+                <table class="basket__data">
+                    <tr>
+                        <th class="basket_title basket__title_type_product"><span>Product</span></th>
+                        <th class="basket_title basket__title_type_price"><span>Price</span></th>
+                        <th class="basket_title basket__title_type_qty"><span>Qty</span></th>
+                        <th class="basket_title basket__title_type_cost"><span>Cost</span></th>
+                    </tr>
+                    <tr class="item">
+                        <td class="item__name">Cotton T-Shirt, Medium</td>
+                        <td>£<span class="item__price">1.99</span></td>
+                        <td><input class="item__qty" type="text" value="1"></td>
+                        <td>
+                            <p>£<span class="item__cost">1.99</span></p>
+                            <a class="item__delete" href="#">delete</a>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td class="item__name">Baseball Cap, One Size</td>
+                        <td>£<span class="item__price">2.99</span></td>
+                        <td><input class="item__qty" type="text" value="2"></td>
+                        <td>
+                            <p>£<span class="item__cost">5.98</span></p>
+                            <a class="item__delete" href="#">delete</a>
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td class="item__name">Swim Shorts, Medium</td>
+                        <td>£<span class="item__price">3.99</span></td>
+                        <td><input class="item__qty" type="text" value="1"></td>
+                        <td>
+                            <p>£<span class="item__cost">3.99</span></p>
+                            <a class="item__delete" href="#">delete</a>
+                        </td>
+                    </tr>
+                    <tr class="subtotal">
+                        <td colspan="3">Subtotal</td>
+                        <td>£<span class="subtotal__value">11.96</span></td>
+                    </tr>
+                    <tr class="vat">
+                        <td colspan="3">VAT @ 20%</td>
+                        <td>£<span class="vat__value">2.39</span></td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="3">Total Cost</td>
+                        <td>£<span class="total__value">14.35</span></td>
+                    </tr>
+                </table>
+
+                <input class="basket__submit" type="submit" value="Buy Now &raquo;">
+            </form>
+        </div>
+
+        <div class="content__push"></div>
+    </div>
+
+    <div class="footer">
+        <p class="footer__content">&copy; <strong>2013 AKQA Ltd.</strong> Registered in England: 2964394</p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/basket.js"></script>
+
+</body>
+</html>

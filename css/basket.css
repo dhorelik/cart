@@ -1,0 +1,463 @@
+﻿/* ----------------------------- global reset ------------------------------ */
+
+html, body, div, span,
+h1, h2, p,
+a, strong, form,
+table, tbody, thead, tr, th, td
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body
+{
+    line-height: 1;
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+a
+{
+    outline: none;
+}
+
+
+/* ---------------------------- general layout ----------------------------- */
+
+html,
+body
+{
+    height: 100%;
+}
+
+.content
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    
+    margin: 0 0 -41px;
+    padding: 0 35px;
+
+    background: #ffffff;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOWQ5ZDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #ffffff 0%, #d9d9d9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d9d9d9));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#d9d9d9 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#d9d9d9 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#d9d9d9 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#d9d9d9 100%);
+}
+
+.content__wrapper
+{
+    width: 500px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.content__push
+{
+    height: 41px;
+}
+
+.footer
+{
+    height: 40px;
+    border-top: 1px solid #000;
+    background: #666;
+}
+
+.footer__content
+{
+    width: 480px;
+    margin: 0 auto;
+    padding: 12px 0 0 20px;
+}
+
+
+/* --------------------------------- blocks --------------------------------- */
+
+.logo
+{
+    padding: 130px 20px 70px;
+}
+
+.logo__link
+{
+    display: block;
+    width: 100px;
+    height: 48px;
+
+    background: url(../img/logo.png) 0 0 no-repeat transparent;
+    background-size: 100px 48px;
+    text-indent: -9999px;
+}
+
+/* description */
+
+.description
+{
+    margin: 0 0 65px;
+    padding: 0 20px;
+}
+
+.description__title
+{
+    margin-bottom: 14px;
+}
+
+/* basket */
+
+.basket
+{
+    margin: 0 0 173px;
+    padding-bottom: 55px; /* fits the floated button */
+
+    position: relative; /* helps position delete links */
+}
+
+.basket__data
+{
+    width: 100%;
+}
+
+/* submit button */
+
+.basket__submit
+{
+    float: right;
+    margin: 0 20px 0 0;
+    padding: 9px 5px 11px;
+    border: 0;
+
+    background: #006;
+
+    border-radius: 9px;
+    box-shadow: 5px 5px  5px rgba(0, 0, 0, .53);
+    cursor: pointer;
+}
+
+.basket__submit:hover
+{
+    background: #33f;
+}
+
+.basket__submit_disabled_yes,
+.basket__submit_disabled_yes:hover
+{
+    background: #999;
+    cursor: default;
+}
+
+/* column titles and widths */
+
+.basket_title
+{
+    width: 16%;
+}
+
+.basket__title_type_product
+{
+    width: 48%;
+    text-align: left;
+}
+
+.basket__title_type_price,
+.basket__title_type_cost
+{
+    text-align: right;
+}
+
+.basket_title span
+{
+    display: block;
+
+    border-bottom: 2px solid #999;
+    margin-bottom: 14px;
+}
+
+.basket__title_type_product span
+{
+    padding-left: 20px;
+}
+
+.basket__title_type_cost span
+{
+    padding-right: 20px;
+}
+
+/* item rows*/
+
+.item:nth-child(2n+1) td
+{
+    background: #ddd;
+}
+
+.item td
+{
+    padding: 9px 0;
+    text-align: right;
+
+    vertical-align: middle;
+}
+
+tr td:first-child
+{
+    padding-left: 20px;
+    text-align: left;
+}
+
+.basket__data td:last-child
+{
+    padding-right: 20px;
+    text-align: right;
+}
+
+/* qty input */
+
+.qty
+{
+    position: relative;
+    padding-right: 19px;
+}
+
+.item__qty
+{
+    width: 30px;
+    height: 18px;
+    padding: 5px 4px;
+    margin: 0 auto;
+    border: 1px solid #999;
+
+    line-height: 18px;
+    text-align: right;
+}
+
+.item__qty_invalid_yes
+{
+    border: 1px solid #f66;
+    color: #f66;
+}
+
+.qty a
+{
+    display: block;
+    height: 14px;
+
+    position: absolute;
+    right: 0;
+
+    background: #999;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.qty__plus
+{
+    top: 0;
+
+    width: 11px;
+    padding-right: 5px;
+    line-height: 16px;
+}
+
+.qty__minus
+{
+    bottom: 0;
+
+    width: 9px;
+    padding-right: 7px;
+    line-height: 13px;
+}
+
+/* total rows */
+
+.subtotal td
+{
+    padding-top: 38px;
+}
+
+.subtotal td,
+.vat td
+{
+    height: 24px;
+}
+
+.total td
+{
+    padding: 25px 0 54px;
+}
+
+/* delete buttons */
+
+.item__delete
+{
+    display: block;
+    width: 16px;
+    height: 22px;
+
+    position: absolute;
+
+    right: -26px;
+    margin-top: -21px;
+    background: url(../img/sprite.png) 0 -23px no-repeat transparent;
+    background-size: 16px 45px;
+    overflow: hidden;
+    text-indent: 9999px;
+}
+
+.item__delete:hover
+{
+    background-position: 0 0;
+}
+
+
+/* --------------------------------- fonts --------------------------------- */
+
+body,
+.item__qty
+{
+    font-family: 'Droid Serif', serif;
+}
+
+.basket__submit
+{
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 24px;
+    color: #fff;
+
+    letter-spacing: -1px;
+}
+
+.description__title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, .2);
+    letter-spacing: -1px;
+}
+
+.description p
+{
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -.5px;
+}
+
+.basket__data,
+.item__qty
+{
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.subtotal,
+.vat
+{
+    color: #666;
+}
+
+.basket_title,
+.footer strong,
+.total
+{
+    font-weight: 700;
+}
+
+.footer__content
+{
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+
+/* ----------------------------- old IE fixes  ----------------------------- */
+
+.item_place_odd td
+{
+    background: #ddd;
+}
+
+.basket__data .item__column_place_last
+{
+    padding-right: 20px;
+    text-align: right;
+}
+
+
+/* ------------------------ responsive adjustments  ------------------------ */
+
+@media only screen and (max-width: 650px) {
+
+    .content__wrapper,
+    .footer__content
+    {
+        width: auto;
+        max-width: 500px;
+        min-width: 300px;
+    }
+
+    .footer{
+        text-align: center;
+    }
+
+    .footer__content
+    {
+        padding-left: 0;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .content
+    {
+        padding: 0 35px 0 0;
+    }
+
+    .basket__data,
+    .item__qty
+    {
+        font-size: 16px;
+    }
+
+    .basket__data td
+    {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+
+/* --------------------------------- retina -------------------------------- */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+    .logo__link
+    {
+        background-image: url(../img/logo@2x.png);
+        background-size: 100px 48px;
+    }
+
+    .item__delete
+    {
+        background-image: url(../img/sprite@2x.png);
+        background-size: 16px 45px;
+    }
+
+}
